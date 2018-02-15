@@ -8,18 +8,17 @@
 
 void decode(String s ,Node root){
     
-    if(s.length() == 0)
-        return; 
+    Node iter = root; 
     
-    if(root.right == null && root.left == null){
-        System.out.print(root.data); 
-        decode(s.substring(1), root); 
-    }
-    
-    else{
-        if(s.charAt(0) == '0')
-            decode(s.substring(1), root.left); 
+    for(int i = 0; i<s.length(); i++){
+        if(s.charAt(i) == '0')
+            iter = iter.left; 
         else
-            decode(s.substring(1), root.right); 
+            iter = iter.right; 
+
+        if(iter.left == null && iter.right == null){
+            System.out.print(iter.data); 
+            iter = root;  
+        }
     }
 }
