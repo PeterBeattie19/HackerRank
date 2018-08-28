@@ -1,4 +1,5 @@
 # Complete the primeQuery function below.
+import math 
 primes = {} 
 def isPrime(n):
     if n in primes: 
