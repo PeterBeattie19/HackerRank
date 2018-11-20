@@ -10,9 +10,4 @@ def split_by_similar(s):
         pos = end 
     return res 
 
-
-s = input() 
-a = split_by_similar(s)
-
-b = [tuple([len(i), int(i[0])]) for i in a] 
-print(" ".join(map(str, b))) 
+print(" ".join(map(str, [tuple([len(i), int(i[0])]) for i in split_by_similar(input())])))
