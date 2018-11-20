@@ -1,2 +1,2 @@
 # HackerRank
-HackerRank problem solutions 
+HackerRank problem solutions, job interview tests and competitions.  
