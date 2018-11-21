@@ -6,13 +6,13 @@ import java.util.regex.*;
 
 public class Solution {
     
-    public static boolean isBalanced(String expression) {
+    public static boolean isBalanced(String x) {
         char openings[] = {'{' , '(' , '['}; 
         char closings[] = {'}' , ')' , ']'}; 
         
         Stack<Character> s = new Stack<Character>(); 
         
-        for(char c: expression.toCharArray()){
+        for(char c: x.toCharArray()){
             if(inArr(c,openings)==true){
                 s.push(c); 
                  
@@ -28,7 +28,9 @@ public class Solution {
     }
     
     public static boolean inArr(char c, char arr[]){
-        for(char s: arr) if(s==c) return true; 
+        for(char s: arr)
+            if(s==c)
+                return true; 
         
         return false; 
     }
@@ -48,7 +50,10 @@ public class Solution {
         int t = in.nextInt();
         for (int a0 = 0; a0 < t; a0++) {
             String expression = in.next();
-            System.out.println( (isBalanced(expression)) ? "YES" : "NO" );
+            if(isBalanced(expression))
+                System.out.println("YES"); 
+            else
+                System.out.println("NO"); 
         }
     }
 }
