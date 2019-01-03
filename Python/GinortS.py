@@ -1,0 +1,8 @@
+a = list(sorted(input())) 
+nums = list(filter(lambda x: x.isdigit(), a)) 
+letters = list(filter(lambda x: not x.isdigit(), a)) 
+odds = list(filter(lambda x: int(x)%2==1, nums)) 
+evens = list(filter(lambda x: int(x)%2==0, nums)) 
+lower = list(filter(lambda x: ord(x)<123 and ord(x)>=97, letters)) 
+caps = list(filter(lambda x: ord(x)>=65 and ord(x)<=90, letters)) 
+print("".join(lower+caps+odds+evens)) 
