@@ -6,7 +6,7 @@ def get_input():
     return grid
 
 
-def find(lst,tar):
+def find(lst, tar):
     for i in range(len(lst)):
         for j in range(len(lst[i])):
             if lst[i][j] == tar:
@@ -36,7 +36,6 @@ def add(tuples):
 
 def search(grid, bot, target):
     bot_pos, target_pos = find(grid, bot), find(grid, target)
-    solution_path = []
     move_map = [((0, 1), "RIGHT"), ((1, 0), "DOWN"), ((0, -1), "LEFT"), ((-1, 0), "UP")]
     
     def _search(constraints, pos, targ, visited, path):
